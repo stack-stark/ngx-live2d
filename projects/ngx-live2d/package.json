@@ -1,12 +1,24 @@
 {
   "name": "ngx-live2d",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^17.1.0",
     "@angular/core": "^17.1.0"
   },
+  "description": "支持angular 17的live2D插件",
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stack-stark/ng-live2d.git"
+  },
+  "sideEffects": false,
+  "author": "stack-stark",
+  "license": "MIT",
+  "keywords": ["live2d","angular", "angular library"],
+  "bugs": {
+    "url": "https://github.com/stack-stark/ng-live2d/issues"
+  },
+  "homepage": "https://github.com/stack-stark/ng-live2d#readme"
 }

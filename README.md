@@ -1,27 +1,58 @@
-# LibWorkspace
+# about
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+angular 下的 live2d 库
 
-## Development server
+# Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```bash
+npm install --save ng-live2d
+#or
+yarn add ng-live2d
+```
 
-## Code scaffolding
+# Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```js
+impor { NgLive2dModule } from 'ng-live2d';
 
-## Build
+@NgModule({
+    "imports": [
+        NgLive2dModule
+    ]
+})
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```html
+<lib-ng-live2d [modelNameOrUrl]="" [needToTop]="" [positionRight]=""></lib-ng-live2d>
+```
 
-## Running unit tests
+# Params
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### modelNameOrUrl string
 
-## Running end-to-end tests
+模型名或地址,包含以下名字,可不传,默认 hijiki
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+`z16`,`Epsilon2_1`,`izumi`,`koharu`,`shizuku`,`miku`,`hijiki`,`tororo`
 
-## Further help
+如果传入值没匹配到上面名字则视为传入的为模型 url,则加载传入的地址模型
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### needToTop boolean
+
+是否需要点击回到顶部功能,可不传默认 false
+
+### positionRight boolean
+
+是否右下角显示,默认 true,可不传;false 则右下角显示
+
+# Change Log
+
+0.0.1 初始版本--2020.3.5
+0.0.2 增加支持传入模型地址,支持左下角显示--2020.3.6
+
+# Demo
+
+http://live2d.asnyc.cn
+
+# License
+
+MIT
